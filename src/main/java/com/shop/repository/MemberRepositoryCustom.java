@@ -16,6 +16,4 @@ public interface MemberRepositoryCustom {
      */
     Page<Member> getAdminMemberPage(MemberSearchDto memberSearchDto, Pageable pageable);
 
-    Page<MainMemberDto> getMainMemberPage(MemberSearchDto memberSearchDto, Pageable pageable);
-
 }

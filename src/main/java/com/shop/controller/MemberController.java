@@ -66,7 +66,7 @@ public class MemberController {
     @GetMapping(value = {"/admin/members", "/admin/members/{page}"})
     public String memberManage(MemberSearchDto memberSearchDto, @PathVariable("page") Optional<Integer> page, Model model) {
 
-        Pageable pageable = PageRequest.of(page.orElse(0), 3);
+        Pageable pageable = PageRequest.of(page.orElse(0), 10);
         Page<Member> members = memberService.getAdminMemberPage(memberSearchDto, pageable);
 
         model.addAttribute("members", members);
